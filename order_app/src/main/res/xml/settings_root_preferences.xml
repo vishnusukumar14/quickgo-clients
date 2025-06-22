@@ -1,0 +1,56 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--    <PreferenceCategory-->
+    <!--        android:title="Store Preferences"-->
+    <!--        android:visibility="gone">-->
+    <!--        <Preference-->
+    <!--            android:visibility="gone"-->
+    <!--            app:enabled="false"-->
+    <!--            app:icon="@drawable/round_room_preferences_24"-->
+    <!--            app:iconSpaceReserved="true"-->
+    <!--            app:isPreferenceVisible="true"-->
+    <!--            app:key="setStorePreferences_pref"-->
+    <!--            app:summary="Items will be checked and delivered from these preferred store when ordered!"-->
+    <!--            app:title="Set your store preference" />-->
+
+    <!--        &lt;!&ndash;        <SwitchPreferenceCompat&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:defaultValue="false"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:key="orderByShopRecommendation_pref"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:summary="When enabled, you can directly order from nearby recommended shops within 5-10km radius."&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:title="Order from recommended shops" />&ndash;&gt;-->
+    <!--    </PreferenceCategory>-->
+
+    <PreferenceCategory app:title="Manage Addresses">
+        <Preference
+            app:enabled="true"
+            app:icon="@drawable/round_add_home_work_24"
+            app:iconSpaceReserved="true"
+            app:isPreferenceVisible="true"
+            app:key="addNewAddress_pref"
+            app:summary="Tap to add a new delivery address for this account"
+            app:title="Add a new delivery address" />
+
+        <Preference
+            android:id="@+id/preference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:enabled="true"
+            app:iconSpaceReserved="true"
+            app:isPreferenceVisible="true"
+            app:key="showAllAddress_pref"
+            app:summary="Tap to see all the address associated with this account."
+            app:title="Manage saved addresses" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Developer settings">
+        <SwitchPreferenceCompat
+        android:defaultValue="false"
+        app:enabled="true"
+        app:key="use_test_server"
+        app:summary="When enabled, the application will route all requests to the test server,
+        Requires restart."
+        app:title="Use test server" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

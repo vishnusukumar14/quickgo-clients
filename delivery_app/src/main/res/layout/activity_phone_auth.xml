@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.authentication.signInWithPhoneNumber.PhoneAuthActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#043359 "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/login_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/authBanner_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/archivo_black"
+                android:lineSpacingExtra="5dp"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="5dp"
+                android:text="Partner Login"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                app:drawableLeftCompat="@drawable/baseline_login_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Enter your phone and OTP to continue"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/authBanner_textView"
+                app:layout_constraintStart_toStartOf="@+id/authBanner_textView"
+                app:layout_constraintTop_toBottomOf="@+id/authBanner_textView" />
+
+            <TextView
+                android:id="@+id/statusView_textBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Checking..."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ProgressBar
+                android:id="@+id/progressBar9801"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="102dp"
+                android:layout_marginEnd="5dp"
+                android:indeterminateTint="#656767"
+                app:layout_constraintBottom_toBottomOf="@+id/statusView_textBox"
+                app:layout_constraintEnd_toStartOf="@+id/statusView_textBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/statusView_textBox" />
+
+            <LinearLayout
+                android:id="@+id/loginViewLayout_linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#FBF8F8"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                tools:layout_editor_absoluteX="2dp">
+
+                <!-- Phone Number Field -->
+
+
+                <!-- OTP Field -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- Title -->
+
+                    <!-- Phone Number Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Phone Number">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phoneNumberFieldLoginFragment_editTextText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/baseline_phone_24"
+                            android:drawablePadding="8dp"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:padding="12dp"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Request OTP Button -->
+                    <Button
+                        android:id="@+id/buttonSendOtp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="12dp"
+                        android:text="Request OTP"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- Title -->
+                    <TextView
+                        android:id="@+id/tvOtpTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/archivo_black"
+                        android:text="Enter OTP"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <!-- OTP Boxes -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="32dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!-- Individual OTP Box -->
+                        <EditText
+                            android:id="@+id/otpBox1"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/otp_box_border"
+                            android:fontFamily="@font/archivo_black"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/otpBox2"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/otp_box_border"
+                            android:fontFamily="@font/archivo_black"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/otpBox3"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/otp_box_border"
+                            android:fontFamily="@font/archivo_black"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/otpBox4"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/otp_box_border"
+                            android:fontFamily="@font/archivo_black"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/otpBox5"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/otp_box_border"
+                            android:fontFamily="@font/archivo_black"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/otpBox6"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/otp_box_border"
+                            android:fontFamily="@font/archivo_black"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!-- Verify OTP Button -->
+                    <Button
+                        android:id="@+id/buttonVerifyOtp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="12dp"
+                        android:text="Verify OTP"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Password Field -->
+
+                <ProgressBar
+                    android:id="@+id/loginStatus_progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/statusViewLoginFragment_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/signInWithEmail_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/login_with_email"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
